@@ -63,7 +63,19 @@ public class UserInterface {
                 }
                 System.out.println(seats);
             } else if (number == 3) {
-                
+                System.out.println("Consulta de pasajero.");
+                System.out.print("Ingrese el nombre del pasajero: ");
+                String name = String.valueOf(this.scanner.nextLine());
+                System.out.print("Ingrese el apellido del pasajero: ");
+                String lastname = String.valueOf(this.scanner.nextLine());
+                if (passenger.equals(name)) {
+                    if (passenger.equals(lastname)) {
+                        System.out.println("El pasajero se encuentra en el asiento: "
+                        + this.seats.getRow() + this.seats.getCol());
+                    }
+                } else {
+                    System.out.println("El pasajero no se encuentra en el avión.");
+                }
             }
         }
     }
